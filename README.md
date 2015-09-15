@@ -1,50 +1,53 @@
-artDialog
-=========
+#	artDialog
 
-优雅的web对话框控件
+artDialog——经典、优雅的网页对话框控件。
+文档与示例：<http://aui.github.io/artDialog/doc/index.html>
 
-artDialog 是一个精心设计的对话框控件，它拥有精致的界面与易用的编程接口。
+##	成功案例
 
-## 概述
+超过 40 万网站在使用 artDialog，其中不乏国内顶尖的产品：
 
-artDialog 是一个精心设计的 web 对话框控件，它继承与延伸了桌面对话框的特性，拥有细致的用户体验与精致的界面。artDialog 基于 LGPL 协议开源，无论是个人还是商业项目都可免费使用。
+*	[QQ空间 v8（腾讯）](http://qzone.qq.com)
+*	[Phpcms（盛大）](http://www.phpcms.cn)
+*	[极路由](http://www.hiwifi.com)
+*	...
 
-## 特点
+##	更新历史
 
-#### 自适应内容尺寸
+6.0.4
 
-对话框采用特殊UI结构，无论使用AJAX异步填充内容还是类似tabs等控件导致内容变化，对话框均可自动自适应内容尺寸。
+1. ``content()``方法传入隐藏元素并显示，并且``remove()``的时候会将元素插入到``body``避免被销毁 [#103](https://github.com/aui/artDialog/issues/103) [#126](https://github.com/aui/artDialog/issues/126)
+2. 修复``button``方法可能会多次绑定事件的问题
+3. 模态对话框可以避免 shift + tab 将焦点移出对话框 [#67](https://github.com/aui/artDialog/issues/67)
 
-#### 智能文本对齐
+6.0.3
 
-如果设置了对话框宽度（包括用户通过调节把柄改变了尺寸），对话框中的文本会自动居中或者居左对齐，这些都是使用用CSS实现的。
+1. 修复``button``方法直接传入 html 不显示的问题
+2. 修复版本管理导致[#78](https://github.com/aui/artDialog/issues/78)重现问题
 
-#### 黄金比例垂直居中
+6.0.2
 
-对话框默认会采用黄金比例垂直居中弹出，正如网页中重要的内容会被安排在垂直黄金区域一样，这样更舒适。
+1. 提供无依赖 seajs 与 requirejs 的版本
+2. 取消按钮增加``cancelDisplay``配置，保留``cancel``事件的同时也不会显示取消按钮
 
-#### 可吸附式弹出
+6.0.1
 
-宽屏笔记本用户已经逐渐成为主流，很多时候大幅度的移动鼠标操作也是一个麻烦的事情（尤其是使用触控板），artDialog支持设置在onclick事件触发源弹出，以让用户操作更加便捷。
+1. 进一步完善焦点管理，避免抢夺开发者自己设置的焦点[#67](https://github.com/aui/artDialog/issues/67)
+2. 修复对话框内容使用 html5 data-id 属性冲突的问题[#78](https://github.com/aui/artDialog/issues/78)
+3. 改善 Esc 快捷键与 cancel 的问题[#36](https://github.com/aui/artDialog/issues/36)
 
-#### 支持快捷键与默认焦点
+6.0.0
 
-* ESC快捷键默认触发对话框关闭（除非在输入状态）。
+1. 功能增强：支持定义左下角的区域 HTML、支持 12 个方向的气泡对话框、支持无标题栏与按钮区的对话框
+2. 更好的交互体验：更加先进的焦点管理，支持无障碍访问
+3. 面向未来：基于 HTML5 Dialog 的 API
+4. 模块化：支持 AMD、CMD 规范
+5. 可选增强版：拖拽支持、简化框架页面调用
 
-* 若有确定按钮，焦点默认停留在确定按钮上，否则停留在右上角关闭按钮上，这样用户可以通过回车键进行操作。
+##	授权协议
 
-### 友好的API
+免费，且开源，基于[LGPL](./LICENSE.md)协议。
 
-在保持小巧的程序体积之外，artDialog提供了丰富的可选配置与方法。它的API风格统一，简单易用，稍微阅读文档一个示例即可举一反三。
+------------------
 
-## 用户
-
-* 腾讯
-* 盛大
-* 中国移动
-* 中国电信
-* ...
-
-## 演示
-
-http://aui.github.com/artDialog/
+*artDialog，因极致而骄傲！——作者，糖饼*
